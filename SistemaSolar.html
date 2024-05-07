@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  
-  <link type="text/css" rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SistemaSolar</title>
 
-  
-  <meta charset="UTF-8">
-
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SistemaSolar</title>
-
-  
-</head><body style=" background-image: url(planetas/planetas/imagenes/andy-holmes-LUpDjlJv4_c-unsplash.jpg);"><br>
-<div class="page">
+</head>
+<body style="background-image: url(Images/andy-holmes-LUpDjlJv4_c-unsplash.jpg);">
+<div style="color: white;" class="page">
 <div class="item">
 <div class="title">
 <h1>El Sistema Solar</h1>
 <h2>Planetas</h2>
 </div>
-<div class="planets">
-<div><a href="Pages/MERCURIO.html">Mercurio</a></div>
+<div style="color: white;" class="planets">
+<div style="color: white;"><a href="Pages/MERCURIO.html">Mercurio</a></div>
 <div><a href="Pages/VENUS.html">Venus</a></div>
 <div><a href="Pages/TIERRA.html">Tierra</a></div>
 <div><a href="Pages/MARTE.html">Marte</a></div>
@@ -28,8 +22,8 @@
 <div><a href="Pages/URANO.html">Urano</a></div>
 <div><a href="Pages/NEPTUNO.html">Neptuno</a></div>
 </div>
-<div class="images"><img style="width: 547px; height: 119px;" alt="" src="Images/Planetas.jpg"></div>
-<br>
+<div style="text-align: center;"><br><img src="./Images/Planetas.jpg" usemap="#map" border="0" height="119" width="547">
+<map name="map"><!-- #$-:Image map file created by GIMP Image Map plug-in --><!-- #$-:GIMP Image Map plug-in by Maurits Rijk --><!-- #$-:Please do not edit lines starting with "#$" --><!-- #$VERSION:2.3 --><!-- #$AUTHOR:Multiusos --><area shape="circle" coords="36,69,11" href="./Pages/MERCURIO.html"><area shape="circle" coords="62,68,8" href="./Pages/VENUS.html"><area shape="circle" coords="87,61,12" href="./Pages/TIERRA.html"><area shape="circle" coords="119,64,8" href="./Pages/MARTE.html"><area shape="circle" coords="205,59,57" href="./Pages/JUPITER.HTML"><area shape="circle" coords="325,57,55" href="./Pages/SATURNO.html"><area shape="circle" coords="437,58,27" href="./Pages/URANO.html"><area shape="circle" coords="488,66,21" href="./Pages/NEPTUNO.html"><area shape="circle" coords="531,65,11" nohref="nohref"></map></div>
 <div class="explain">
 <h2>¿QUÉ ES EL SISTEMA SOLAR?</h2>
 <p> Situado en las afueras del brazo espiral de Orión de la
@@ -52,8 +46,25 @@ Nasa se dirige hacia Plutón donde llegará en 2015. <br>
 <br>
 Comienza la exploración de nuestro Sistema Solar y disfruta de las
 maravillas que nos ofrece nuestro rincón en el Universo. </p>
-
+</div>
+<div class="container">
+<form action="#" method="post" class="mi-formulario">
+<h2>Contacto</h2>
+<p>
+<label for="nombre">Nombre:</label>
+<input id="nombre" name="nombre" type="text"></p>
+<p>
+<label for="email">Email:</label>
+<input id="email" name="email" type="email"></p>
+<p>
+<label for="mensaje">Mensaje:</label>
+<textarea id="mensaje" name="mensaje"></textarea></p>
+<p>
+<button type="submit">Enviar</button>
+</p>
+</form>
 </div>
 </div>
 </div>
+<script style="color: white;" type="module" src="script.js"></script>
 </body></html>
