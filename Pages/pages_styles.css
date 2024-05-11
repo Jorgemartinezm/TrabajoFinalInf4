@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+    body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(planetas/planetas/imagenes/andy-holmes-LUpDjlJv4_c-unsplash.jpg);
+    }
+    .page{
+    display: flex;
+    justify-content: center;
+    }
+    .item{
+    width: 1000px;
+    text-align: justify;
+    background-color: rgba(117, 117, 116, 0.9);
+    border-radius: 30px;
+    margin: 50px;
+    display: flex;
+    }
+    .title{
+    align-items: center;
+    text-align: center; margin-top: 50px;
+    }
+    h1{
+    font-weight: bold;
+    padding: 15px;
+    }
+    .explain{
+    padding: 50px;
+    text-align: justify;
+    }
+    .inicio {
+    text-align: center;
+    padding: 15px;
+    font-weight:bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left:50px;
+    margin-right:50px;
+    border-radius:10px;
+    background-color:rgb(58, 58, 58);
+    margin-bottom: 15px;
+    }
+    .inicio a :hover{
+    border-radius: 30px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    font-weight: bold;
+    transform: scale(1.1);
+    }
+    a{
+    text-decoration:none;
+    color:black;
+    }
+
+    .right{
+        display: inline-block;
+        width: min-content;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .right img{
+        margin-bottom: 25px;
+    }
