@@ -1,202 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia de planetas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Trivia de planetas</title>
 
-        .container {
-            background-color: rgba(192, 192, 192, 0.9);
-            border-radius: 30px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        #imagenPlaneta img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-        }
-
-        #opciones {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #respuesta {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-            color: #333;
-        }
-        .inicio {
-            margin-top: 30px;
-        text-align: center;
-        padding: 5px 20px 5px 20px;
-        font-weight:bold;
-        font-family: 'Courier New', Courier, monospace;
-        border-radius:10px;
-        background-color:rgb(58, 58, 58);
-        margin-bottom: 15px;
-        }
-        .inicio a :hover{
-        border-radius: 30px;
-        transition-property: all;
-        transition-duration: 0.5s;
-        text-decoration: none;
-        font-weight: bold;
-        transform: scale(1.1);
-        }
-
-        a{
-        text-decoration:none;
-        color:black;
-        }
-    </style>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f0f0f0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background-image: url(../Images/andy-holmes-LUpDjlJv4_c-unsplash.jpg);
+}
+.container {
+background-color: rgba(192, 192, 192, 0.9);
+border-radius: 30px;
+padding: 20px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+text-align: center;
+}
+h1 {
+margin-bottom: 30px;
+color: #333;
+}
+#imagenPlaneta img {
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+margin-bottom: 20px;
+}
+#opciones {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+button {
+padding: 10px 20px;
+margin: 10px;
+font-size: 16px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+button:hover {
+background-color: #45a049;
+}
+#respuesta {
+font-size: 18px;
+font-weight: bold;
+margin-top: 20px;
+color: #333;
+}
+.inicio {
+margin-top: 30px;
+text-align: center;
+padding: 5px 20px 5px 20px;
+font-weight:bold;
+font-family: 'Courier New', Courier, monospace;
+border-radius:10px;
+background-color:rgb(58, 58, 58);
+margin-bottom: 15px;
+}
+.inicio a :hover{
+border-radius: 30px;
+transition-property: all;
+transition-duration: 0.5s;
+text-decoration: none;
+font-weight: bold;
+transform: scale(1.1);
+}
+a{
+text-decoration:none;
+color:black;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Trivia de planetas</h1>
-        <div id="imagenPlaneta"></div>
-        <div id="opciones">
-            <button onclick="verificarRespuesta(this)">Mercurio</button>
-            <button onclick="verificarRespuesta(this)">Venus</button>
-            <button onclick="verificarRespuesta(this)">Tierra</button>
-            <button onclick="verificarRespuesta(this)">Marte</button>
-            <button onclick="verificarRespuesta(this)">Júpiter</button>
-            <button onclick="verificarRespuesta(this)">Saturno</button>
-            <button onclick="verificarRespuesta(this)">Urano</button>
-        </div>
-        <div id="respuesta"></div>
-    </div>
-    <div class="inicio">
-        <a href="../SistemaSolar.html">
-        <h3>PLANETAS</h3>
-        </a></div>
-    <script>
-        // Array con las imágenes de los planetas
-        const imagenesPlanetas = [
-            "mercurio_01.jpg",
-            "venus_03.jpg",
-            "Tierra_02.jpg",
-            "marte_04.jpg",
-            "jupiter_04.jpg",
-            "Saturno_09.jpg",
-            "Urano_04.jpg",
-            "Neptuno_06.jpg",
-            "mercurio_03.jpg",
-            "venus_05.jpg",
-            "Tierra_05.jpg",
-            "marte_04.jpg",
-            "jupiter_05.jpg",
-            "Saturno_11.jpg",
-            "Urano_03.jpg",
-            "Neptuno_08.jpg",
-            "mercurio_05.jpg",
-            "venus_08.jpg",
-            "Tierra_02.jpg",
-            "marte_08jpg",
-            "jupiter_09.jpg",
-            "Saturno_12.jpg",
-            "Urano_02.jpg",
-            "Neptuno_04.jpg"
-        ];
-
-        // Array con los nombres de los planetas
-        const nombresPlanetas = [
-            "Mercurio",
-            "Venus",
-            "Tierra",
-            "Marte",
-            "Júpiter",
-            "Saturno",
-            "Urano",
-            "Neptuno",
-            "Mercurio",
-            "Venus",
-            "Tierra",
-            "Marte",
-            "Júpiter",
-            "Saturno",
-            "Urano",
-            "Neptuno",
-            "Mercurio",
-            "Venus",
-            "Tierra",
-            "Marte",
-            "Júpiter",
-            "Saturno",
-            "Urano",
-            "Neptuno"
-        ];
-
-        // Función para obtener un número aleatorio entre 0 y max
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        // Función para cargar una imagen aleatoria de un planeta
-        function cargarImagenAleatoria() {
-            const indiceAleatorio = getRandomInt(imagenesPlanetas.length);
-            const imagen = imagenesPlanetas[indiceAleatorio];
-            const nombrePlaneta = nombresPlanetas[indiceAleatorio];
-            document.getElementById("imagenPlaneta").innerHTML = `<img src="${imagen}" alt="${nombrePlaneta}">`;
-            return nombrePlaneta;
-        }
-
-        // Función para verificar la respuesta seleccionada por el usuario
-        function verificarRespuesta(boton) {
-            const respuesta = boton.textContent;
-            const nombrePlanetaCorrecto = document.getElementById("imagenPlaneta").getElementsByTagName("img")[0].alt;
-            const respuestaDiv = document.getElementById("respuesta");
-            if (respuesta === nombrePlanetaCorrecto) {
-                respuestaDiv.textContent = "¡Correcto!";
-                respuestaDiv.style.color = "green";
-            } else {
-                respuestaDiv.textContent = "Incorrecto. La respuesta correcta es: " + nombrePlanetaCorrecto;
-                respuestaDiv.style.color = "red";
-            }
-            cargarImagenAleatoria();
-        }
-
-        // Al cargar la página, cargar una imagen aleatoria
-        window.onload = cargarImagenAleatoria;
-    </script>
-</body>
-</html>
+<div class="container">
+<h1>Trivia de planetas</h1>
+<div id="imagenPlaneta"></div>
+<div id="opciones"> <button onclick="verificarRespuesta(this)">Mercurio</button> <button onclick="verificarRespuesta(this)">Venus</button> <button onclick="verificarRespuesta(this)">Tierra</button> <button onclick="verificarRespuesta(this)">Marte</button> <button onclick="verificarRespuesta(this)">Júpiter</button> <button onclick="verificarRespuesta(this)">Saturno</button> <button onclick="verificarRespuesta(this)">Urano</button> <button onclick="verificarRespuesta(this)">Neptuno</button> </div>
+<div id="respuesta"></div>
+</div>
+<div class="inicio"> <a href="../SistemaSolar.html">
+<h3>PLANETAS</h3>
+</a></div>
+<script>
+// Array con las imágenes de los planetas
+const imagenesPlanetas = [
+"../Images/mercurio_01.jpg",
+"../Images/venus_03.jpg",
+"../Images/Tierra_02.jpg",
+"../Images/marte_04.jpg",
+"../Images/jupiter_04.jpg",
+"../Images/Saturno_09.jpg",
+"../Images/Urano_04.jpg",
+"../Images/Neptuno_06.jpg",
+"../Images/mercurio_03.jpg",
+"../Images/venus_05.jpg",
+"../Images/Tierra_05.jpg",
+"../Images/marte_05.jpg",
+"../Images/jupiter_05.jpg",
+"../Images/Saturno_11.jpg",
+"../Images/Urano_03.jpg",
+"../Images/Neptuno_08.jpg",
+"../Images/mercurio_05.jpg",
+"../Images/venus_08.jpg",
+"../Images/Tierra_02.jpg",
+"../Images/marte_08jpg",
+"../Images/jupiter_09.jpg",
+"../Images/Saturno_12.jpg",
+"../Images/Urano_02.jpg",
+"../Images/Neptuno_04.jpg"
+];
+// Array con los nombres de los planetas
+const nombresPlanetas = [
+"Mercurio",
+"Venus",
+"Tierra",
+"Marte",
+"Júpiter",
+"Saturno",
+"Urano",
+"Neptuno",
+"Mercurio",
+"Venus",
+"Tierra",
+"Marte",
+"Júpiter",
+"Saturno",
+"Urano",
+"Neptuno",
+"Mercurio",
+"Venus",
+"Tierra",
+"Marte",
+"Júpiter",
+"Saturno",
+"Urano",
+"Neptuno"
+];
+// Función para obtener un número aleatorio entre 0 y max
+function getRandomInt(max) {
+return Math.floor(Math.random() * max);
+}
+// Función para cargar una imagen aleatoria de un planeta
+function cargarImagenAleatoria() {
+const indiceAleatorio = getRandomInt(imagenesPlanetas.length);
+const imagen = imagenesPlanetas[indiceAleatorio];
+const nombrePlaneta = nombresPlanetas[indiceAleatorio];
+document.getElementById("imagenPlaneta").innerHTML = `<img src="${imagen}" alt="${nombrePlaneta}">`;
+return nombrePlaneta;
+}
+// Función para verificar la respuesta seleccionada por el usuario
+function verificarRespuesta(boton) {
+const respuesta = boton.textContent;
+const nombrePlanetaCorrecto = document.getElementById("imagenPlaneta").getElementsByTagName("img")[0].alt;
+const respuestaDiv = document.getElementById("respuesta");
+if (respuesta === nombrePlanetaCorrecto) {
+respuestaDiv.textContent = "¡Correcto!";
+respuestaDiv.style.color = "green";
+} else {
+respuestaDiv.textContent = "Incorrecto. La respuesta correcta es: " + nombrePlanetaCorrecto;
+respuestaDiv.style.color = "red";
+}
+cargarImagenAleatoria();
+}
+// Al cargar la página, cargar una imagen aleatoria
+window.onload = cargarImagenAleatoria;
+</script>
+</body></html>

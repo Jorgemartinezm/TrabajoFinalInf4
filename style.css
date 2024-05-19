@@ -67,6 +67,7 @@
         display: flex;
         justify-content: center;
         margin-top: 15px;
+	margin-bottom:25px;
     }
     
     .Trivial p{
@@ -144,4 +145,31 @@
     
     .mi-formulario button:hover {
         background-color: #0056b3;
+    }
+
+.aling{
+        text-align:center;
+    }
+.inicio {
+    text-align: center;
+    padding: 15px;
+    font-weight:bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left:50px;
+    margin-right:50px;
+    border-radius:10px;
+    background-color:rgba(62, 62, 62, 0.575);
+    margin-bottom: 15px;
+    }
+    .inicio a :hover{
+    border-radius: 30px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    font-weight: bold;
+    transform: scale(1.1);
+    }
+    a{
+    text-decoration:none;
+    color:white;
     }
